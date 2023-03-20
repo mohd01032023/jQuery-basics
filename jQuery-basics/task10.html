@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li> 
+            Cloths <button type="button">+</button>
+            <ul>
+                <li>
+                    T-shirts <button type="button">+</button>
+                </li>
+                <li>
+                    Trousers <button type="button">+</button>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            Electronics <button type="button">+</button>
+            <ul>
+                <li>
+                    Mobiles <button type="button">+</button>
+                </li>
+                <li>
+                    Tabs <button type="button">+</button>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <input type="text" placeholder="Enter new list item here">
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(document).on('click', 'button', function(){
+            // Works for all buttons
+            let newItem = $('input').val();
+            if(newItem == ""){
+                alert("Input feild is empty");
+            } else{
+                $(this).parent().append(`<li>${newItem}<button type="button">+</button></li>`);
+            }
+        })
+    })
+</script>
+</html>

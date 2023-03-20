@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 15px;
+        }
+        button{
+            width: 100px;
+            height: 25px;
+        }
+        img{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="buttons">
+        <button type="button" id="buttons__prev">Previous</button>
+        <button type="button" id="buttons__next">Next</button>
+    </div>
+    <img src="./pics/2.png">
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    let curr = 2;
+
+
+    $(function(){
+        $("#buttons__prev").click(
+            function(){
+                if(curr == 0){
+                    curr = 4
+                } else{
+                    --curr; 
+                }
+                $('img').attr("src", `./pics/${curr}.png`)
+            }
+
+        )
+
+        $('#buttons__next').click(
+            function(){
+                if(curr == 4){
+                    curr = 0
+                } else{
+                    ++curr
+                }
+                $('img').attr("src", `./pics/${curr}.png`)
+            }
+        )
+    })
+</script>
+</html>

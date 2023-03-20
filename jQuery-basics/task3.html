@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label>First name:</label>
+        <br>
+        <input id="fname" type="text">
+        <br>
+        <label>Last name:</label>
+        <br>
+        <input id="lname" type="text">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('button').click(
+        function () {
+            if ($('#fname').val() == "") {
+                alert("First name is left empty");
+                $('#fname').css("background-color", "red")
+            }
+            if ($('#lname').val() == "") {
+                alert("Last name is left empty");
+                $('#lname').css("background-color", "red")
+            }
+        }
+    )
+</script>
+
+</html>

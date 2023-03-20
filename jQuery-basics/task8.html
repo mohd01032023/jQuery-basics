@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid #666;
+            border-collapse: collapse;
+        }
+
+        th {
+            border-right: 0px;
+        }
+
+        th,
+        td {
+            width: 100px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Prodcuts</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Duffle bag</td>
+                <td>
+                    <select name="dbag" id="dbag">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </td>
+                <td id="dbag-price"></td>
+            </tr>
+
+            <tr>
+                <td>T-shirt</td>
+                <td>
+                    <select name="tshirt" id="tshirt">
+                        <option value="grey">Grey</option>
+                        <option value="black">Black</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                </td>
+                <td id="tshirt-price"></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    let dbag = {
+        small: 1000,
+        medium: 2000,
+        large: 3000
+    }
+
+    let tshirt = {
+        grey: 1200,
+        black: 1500,
+        blue: 1700
+    }
+    let newval = ""
+
+    $(function () {
+        $('#dbag').change(function () {
+            newval = dbag[$(this).val()]
+            $('#dbag-price').html(newval)
+        })
+
+        $('#tshirt').change(function () {
+            newval = tshirt[$(this).val()]
+            $('#tshirt-price').html(newval)
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <div id="qual1">
+            <input type="text" placeholder="Enter Class">
+            <input type="text" placeholder="Enter Board">
+            <input type="text" placeholder="Enter Marks">
+            <input type="text" placeholder="Enter Division">
+            <button type="button" class="add">+</button>
+            <button type="button" class="rem">-</button>
+        </div>
+    </form>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    let counter = 2;
+    let toAppend = '<div id=qual' + (++counter) + '>\
+        <input type="text" placeholder="Enter Class">\
+        <input type="text" placeholder="Enter Board">\
+        <input type="text" placeholder="Enter Marks">\
+        <input type="text" placeholder="Enter Division">\
+        <button type="button" class="add">+</button>\
+        <button type="button" class="rem">-</button>\
+        </div>'
+
+    $(function () {
+        $(document).on('click', '.add', function(){
+            $(this).parent().parent().append(toAppend);
+        })
+        $(document).on('click', '.rem', function(){
+            $(this).parent().remove();
+        })
+    })
+</script>
+
+</html>
