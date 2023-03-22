@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/nav.css">
+    <link rel="stylesheet" href="./CSS/dynamic-content.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--nav-->
+    <nav>
+        <a href="password-matching.html">Password Matching</a>
+        <a href="table-row-color.html">Table row color</a>
+        <a href="empty-feilds.html">Empty fields</a>
+        <a href="dynamic-form.html">Dynamic form</a>
+        <a href="event-with-time.html">Event with time</a>
+        <a href="image-gallery.html">Image gallery</a>
+        <a href="live-search.html">Live search</a>
+        <a href="dynamic-content.html">Dynamic content</a>
+        <a href="simple-event.html">Simple event</a>
+        <a href="dynamic-list.html">Dynamic list</a>
+    </nav>
+
+    <!--main-->
+    <main>
+        <h3>Products</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th> <th>Size/Color</th> <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="main__dbag">
+                    <td>Duffle bag</td>
+                    <td>
+                        <select name="dbag" id="main__dbag">
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </td>
+                    <td id="main__dbag--price">1000</td>
+                </tr>
+
+                <tr>
+                    <td>T-shirt</td>
+                    <td>
+                        <select name="tshirt" id="main__tshirt">
+                            <option value="grey">Grey</option>
+                            <option value="black">Black</option>
+                            <option value="blue">Blue</option>
+                        </select>
+                    </td>
+                    <td id="main__tshirt--price">1200</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="./JS/dynamic-content.js"></script>
+
+</html>

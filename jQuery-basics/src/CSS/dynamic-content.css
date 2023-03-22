@@ -1,0 +1,21 @@
+table,
+th,
+td {
+    border: 1px solid #d1cfcf;
+    border-collapse: collapse;
+}
+
+/*Duffle bag row is of different color*/
+.main__dbag{
+    background-color: #d1cfcf;
+}
+
+th {
+    border-right: 0px;
+}
+
+th,
+td {
+    width: 100px;
+    padding: 5px;
+}
