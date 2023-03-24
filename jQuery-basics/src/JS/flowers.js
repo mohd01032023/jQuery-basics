@@ -1,4 +1,4 @@
-flowers = ["Daisy",
+const flowers = ["Daisy",
 "Rose",
 "Iris",
 "Narcissus",
@@ -57,7 +57,7 @@ flowers = ["Daisy",
 
 function getMatches(_name){
     let matches = [], name = _name.toLowerCase();
-    for(x of flowers){
+    for(let x of flowers){
         if(x.toLowerCase().includes(name)){ // If _name matches with any flower name, push to matches
             matches.push(x)
         }
